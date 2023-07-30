@@ -21,7 +21,9 @@ git help
 -- // full words
 ### create local repository
 create the folder .git
-```git init```
+```
+git init
+```
 
 ### in color red the files peding to commint
 ```git status```
