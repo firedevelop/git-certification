@@ -21,10 +21,10 @@ git help
 -- // full words
 ### create local repository
 create the folder .git
-```git init``````
+```git init```
 
 ### in color red the files peding to commint
-git status
+```git status```
 
 ![alt text](https://github.com/firedevelop/git-github-certification/blob/main/images/1.png?raw=true)
 
