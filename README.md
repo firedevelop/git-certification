@@ -37,14 +37,9 @@ git add .
 ### exclude the file exclude.txt
 git reset exclude.txt
 // Now is missing the file
-```
-git status
-```
 
-```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
+```html
+git status
 ```
 
 ### comit
