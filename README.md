@@ -25,6 +25,7 @@ create the folder .git
 
 ### in color red the files peding to commint
 git status
+
 ![alt text](https://github.com/firedevelop/git-github-certification/blob/main/images/1.png?raw=true)
 
 
