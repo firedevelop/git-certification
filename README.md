@@ -26,14 +26,16 @@ git init
 ```
 
 ### in color red the files peding to commint
-```git status```
+```
+git status
+```
 
 ![alt text](https://github.com/firedevelop/git-github-certification/blob/main/images/1.png?raw=true)
 
 
 git log
 
-### add all files
+### add: send files to stage
 git add .
 
 ### exclude the file exclude.txt
@@ -44,11 +46,22 @@ git reset exclude.txt
 git status
 ```
 
-### comit
+### comit: like snapshot
 git commit -m "first commit"
 
 ### restore file
 git checkout -- .
 
 ### U
-means untrack, when git no le da seguimiento a ese archivo  
+means unt rack, when git no le da seguimiento a ese archivo  
+
+### brach status
+git branch
+git status  
+
+### rename branch
+-m means modify, branch with the name master to main
+```git branch -m master main ```
+
+
+
