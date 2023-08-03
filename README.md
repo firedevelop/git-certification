@@ -73,5 +73,12 @@ git status
 5º the file 1.txt doesn't change on github
 
 
+### commit by extension (path needed)
+git add js/*.js
 
+### .gitkeep (keep folder tracking when is empty)
+myUploads/.gitkeep
+
+### add whole folder
+``` git add css/ ```
 
