@@ -63,7 +63,7 @@ git status
 -m means modify, branch with the name master to main
 ```git branch -m master main ```
 
-### reset restore
+### reset restore checkout
 1º track all files
 ``` git add.. ```
 2º after track, untrack only one file
