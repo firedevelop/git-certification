@@ -63,11 +63,14 @@ git status
 -m means modify, branch with the name master to main
 ```git branch -m master main ```
 
-### reset restore checkout
+### reset (don't upload changes of one file)
 1º track the files 
 ``` git add . ```
 2º after track, untrack only one file
-``` git reset myFile.md ```
+``` git reset 1.txt ```
+3º git commit -m "."
+4ª git push
+5º the file 1.txt doesn't change on github
 
 
 
