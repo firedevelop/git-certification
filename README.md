@@ -82,3 +82,5 @@ myUploads/.gitkeep
 ### add whole folder
 ``` git add css/ ```
 
+#### create folder and file one line
+mkdir myFolder && myFolder/myFile.txt
