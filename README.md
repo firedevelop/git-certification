@@ -64,8 +64,8 @@ git status
 ```git branch -m master main ```
 
 ### reset restore checkout
-1º track all files
-``` git add.. ```
+1º track the files 
+``` git add . ```
 2º after track, untrack only one file
 ``` git reset myFile.md ```
 
