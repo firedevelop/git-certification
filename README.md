@@ -105,4 +105,22 @@ git diff myFile.txt
 ### see stages files
 git diff --staged
 
+### COMMIT: change last commit name
+```git commit --amend -m "." ```
+
+
+### COMMIT: Add new changes to the last commit
+HEAD  last commit hash
+HEAD^  last commit
+HEAD^2 past last commit
+
+``` git reset --soft HEAD^ ```
+
+
+### FIX WARNING CRLF
+git config core.autocrlf true
+
+
+
+
 
