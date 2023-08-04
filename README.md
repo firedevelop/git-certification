@@ -119,12 +119,13 @@ HEAD^2 past last commit
 soft keep changes, is not destructive
 ``` git reset --soft HEAD^ ```
 using hash
-``` git reset --soft HEAD^ ```
+``` git reset --soft 111222333 ```
 
 
 ### FIX WARNING CRLF
 git config core.autocrlf true
 
+### TIME MACHINE
 
 
 
