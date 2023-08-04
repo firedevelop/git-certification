@@ -125,8 +125,8 @@ using hash
 ### FIX WARNING CRLF
 git config core.autocrlf true
 
-### TIME MACHINE
-git reflog
+
+
 
 
 
