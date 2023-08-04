@@ -107,13 +107,18 @@ git diff --staged
 
 ### COMMIT: change last commit name
 ```git commit --amend -m "." ```
+### COMMIT: FULL EDITION
+```git commit --amend```
+
 
 
 ### COMMIT: Add new changes to the last commit
 HEAD  last commit hash
 HEAD^  last commit
 HEAD^2 past last commit
-
+soft keep changes, is not destructive
+``` git reset --soft HEAD^ ```
+using hash
 ``` git reset --soft HEAD^ ```
 
 
