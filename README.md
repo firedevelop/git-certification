@@ -132,5 +132,10 @@ git config core.autocrlf true
 2º restore
 ``` git reset --hard 111222 ```
 
+### .gitignore
+1º git add .gitignore
+2º add folders like dist/ or *.log
+
+
 
 
