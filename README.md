@@ -97,7 +97,9 @@ mkdir myFolder && myFolder/myFile.txt
 git config --global -e
 
 ## CREATE ALIAS ELEGANTH LOG
+```bash
 git config --global alias.lg "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+```
 
 ## DIFF
 git diff myFile.txt
@@ -141,7 +143,7 @@ git config core.autocrlf true
 
 ### BRANCH - MERGE
 create branch
-``git branch rama-villanos```
+```git branch rama-villanos```
 
 access to branch and start to work on branch
 ``` git checkout rama-villanos```
