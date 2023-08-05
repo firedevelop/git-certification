@@ -110,7 +110,9 @@ git diff --staged
 ### COMMIT: FULL EDITION
 ```git commit --amend```
 
-
+### All tree
+ This flag stages all of the tracked changes in the working tree.
+```git commit -A```
 
 ### COMMIT: Add new changes to the last commit
 HEAD  last commit hash
@@ -137,5 +139,31 @@ git config core.autocrlf true
 2º add folders like dist/ or *.log
 
 
+### BRANCHES
+create branch
+``git branch rama-villanos```
 
+access to branch and start to work on branch
+``` git checkout rama-villanos```
+
+#### commands to play
+git add .
+git commit -m "villanos.md: added"
+git commit -m "villanos.md: added flash"
+
+#### go back to master branch
+git branch
+git checkout master
+
+#### go back to branch
+git branch
+git checkout rama-villanos
+
+#### merge rama-villanos with maste
+go to master branch
+```git checkout master```
+``` git merge rama-villanos ```
+Fast-forward means the merge works well.
+Now remove old branch if you wish
+```git branch -d rama-villanos```
 
