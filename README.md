@@ -139,7 +139,7 @@ git config core.autocrlf true
 2º add folders like dist/ or *.log
 
 
-### BRANCHES
+### BRANCH - MERGE
 create branch
 ``git branch rama-villanos```
 
@@ -164,6 +164,13 @@ go to master branch
 ```git checkout master```
 ``` git merge rama-villanos ```
 Fast-forward means the merge works well.
-Now remove old branch if you wish
-```git branch -d rama-villanos```
+Now remove old branch if you wish. -f force fully deletion and some possible commits don't finished.
+```git branch -d rama-villanos -f```
+
+### BRANCH
+create branch and go to the branch in one line
+```git checkout -b rama-villanos```
+
+
+
 
