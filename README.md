@@ -173,6 +173,46 @@ Now remove old branch if you wish. -f force fully deletion and some possible com
 create branch and go to the branch in one line
 ```git checkout -b rama-villanos```
 
+# REBASE
+## Normal
+![alt text](https://github.com/firedevelop/git-github-certification/blob/main/images/2.png?raw=true)
+![alt text](https://github.com/firedevelop/git-github-certification/blob/main/images/3.png?raw=true)
+## Interactive
+```git rebase -i HEAD~3```
+![alt text](https://github.com/firedevelop/git-github-certification/blob/main/images/4.png?raw=true)
+![alt text](https://github.com/firedevelop/git-github-certification/blob/main/images/5.png?raw=true)
+![alt text](https://github.com/firedevelop/git-github-certification/blob/main/images/6.png?raw=true)
+![alt text](https://github.com/firedevelop/git-github-certification/blob/main/images/7.png?raw=true)
+
+## rebase example
+```git branch```
+```git rebase master```
+
+# REBASE - SQUASH - merge commits
+the number 4 indicate how many commits will be merged
+```git rebase -i HEAD~4```
+replace the last 2 hash by s and p like this:
+![alt text](https://github.com/firedevelop/git-github-certification/blob/main/images/9.png?raw=true)
+
+save data in vi with :wq
+
+# REBASE - How restore only one file after commit 2 files
+start
+```git add .```
+add some text changes to files a.txt and b.txt
+After commit:
+```git commit -am "updates"```
+now restore only one file
+```git checkout -- a.txt```
+
+change pickup to edit
+git rebase -i HEAD~
+git rebase --continue
+
+# GITHUB
+```git remote -v```
+```git push -u origin master```
+![alt text](https://github.com/firedevelop/git-github-certification/blob/main/images/10.png?raw=true)
 
 
 
