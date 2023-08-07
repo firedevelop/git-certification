@@ -206,13 +206,75 @@ now restore only one file
 ```git checkout -- a.txt```
 
 change pickup to edit
-git rebase -i HEAD~
-git rebase --continue
+```git rebase -i HEAD~```
+```git rebase --continue```
+
+
+
+# GITHUB - UPLOAD TAGS FROM LOCAL
+```git push --tags```
+
+# GITHUB - config pull method
+```git config pull.rebase false ```   # merge(the default strategy)
+```git config pull.rebase true```     # rebase
+```git config pull.ff only```         # fast-forward only
+
+We use fast-foward. And this method abort the pull when there are conflicts.
+You can change the method usgin:
+````git config --global -e````
+
+# GITHUB - clone
+git clone https://github.com/firedevelop/git-02.git
+
 
 # GITHUB
+know your repository remote:
 ```git remote -v```
 ```git push -u origin master```
 ![alt text](https://github.com/firedevelop/git-github-certification/blob/main/images/10.png?raw=true)
 
 
+first time, we need to indicate the origin
+```git push -u origin main```
+or
+```git push -u origin master```
+nest times:
+```git push```
+
+# GITHUB - conflicts LOCAL V.S. REMOTE
+QUICK SOLUTION: 
+```git config --global pull.rebase true```
+or edit:
+```git config --global -e```
+
+Actualy we have our local github configured like:
+```git config pull.ff only```
+config to see the conflicts in visual studio
+```git config pull.rebase true```
+now push
+```git push```
+
+if doesn't work, try to commit your pending unstaged changes:
+```git add .```
+```git commit -am "updates"```
+now try again
+```git push```
+
+finally you need to see:
+```git log```
+your local master branch and the remote origin/master on the same hash:
+![alt text](https://github.com/firedevelop/git-github-certification/blob/main/images/11.png?raw=true)
+
+Finally we change the method to rebase, in order to fix the conflicts on Visual Studio UI. Setup rebase pull globally:
+```git config --global pull.rebase true```
+Rebase locally before push
+```git rebase --continue```
+```git push```
+
+
+# GITHUB - PULL REQUEST
+like a merge, but our branch with master and check conflicts with details.
+
+# MARKDOWN
+https://www.markdowntutorial.com/
 
