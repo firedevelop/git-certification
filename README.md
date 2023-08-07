@@ -274,7 +274,23 @@ Rebase locally before push
 
 # GITHUB - PULL REQUEST
 like a merge, but our branch with master and check conflicts with details.
+Pull request allow you verify the changes before merge to main
 
 # MARKDOWN
 https://www.markdowntutorial.com/
+🖥
+
+# FETCH 
+see changes before pull:
+```git fetch```
+
+Now you can see you local branch is HEAD -> master:
+![alt text](https://github.com/firedevelop/git-github-certification/blob/main/images/12.png?raw=true)
+
+and the remote is origin/master.
+Read the commits comments and if you happy with then try to pull:
+```git pull```
+
+After that, your local will be update with remote:
+![alt text](https://github.com/firedevelop/git-github-certification/blob/main/images/13.png?raw=true)
 
