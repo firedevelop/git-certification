@@ -59,8 +59,15 @@ git checkout -- .
 means unt rack, when git no le da seguimiento a ese archivo  
 
 ### brach status
-git branch
-git status  
+status:
+```git status  ```
+show actual branch
+```git status --short --branch```
+or
+```git status -s -b```
+or
+```git branch```
+
 
 ### rename branch
 -m means modify, branch with the name master to main
@@ -91,17 +98,24 @@ mkdir myFolder && myFolder/myFile.txt
 ### resume status
 ``` git status --short ```
 
-## CREATE ALIAS 
+# ALIAS
+## Method 1 (direct command)
+```git config --global alias.s status --short --branch```
+
+## CREATE ALIAS ELEGANTH LOG
+install extension like Github Lab or write the next command:
+```bash
+git config --global alias.lg "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+```
+
 ### i.e for short using the key 's'
 ``` git config --global alias.s status --short ```
 
 ### EDIT alias
 git config --global -e
-
-## CREATE ALIAS ELEGANTH LOG
-```bash
-git config --global alias.lg "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
-```
+## CREATE ALIAS SHORTS
+in [alias] area write the next to see the actual branch info
+```s = status --short --branch```
 
 ## DIFF
 git diff myFile.txt
@@ -212,10 +226,6 @@ change pickup to edit
 ```git rebase --continue```
 
 
-
-# GITHUB - UPLOAD TAGS FROM LOCAL
-```git push --tags```
-
 # GITHUB - config pull method
 ```git config pull.rebase false ```   # merge(the default strategy)
 ```git config pull.rebase true```     # rebase
@@ -297,4 +307,18 @@ After that, your local will be update with remote:
 ![alt text](https://github.com/firedevelop/git-github-certification/blob/main/images/13.png?raw=true)
 
 
-# exercise 09-avengers
+# TAG
+create tag
+```git tag -a v0.0.1 -m "version Alpha"```
+push tag to your repository
+```git push --tags```
+
+# exercise 09
+create new branch on local
+```git checkout -b rama-villanos```
+
+create new branch on github
+git push --set-upstream origin rama-villanos
+
+
+
