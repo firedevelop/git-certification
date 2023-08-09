@@ -1,5 +1,7 @@
-# git-certification
+# git gitHub certification
 
+# Cheat Sheet
+https://education.github.com/git-cheat-sheet-education.pdf
 #  Installation
 https://gist.github.com/Klerith/90a612344dc2d4e4455ea810fdacbe69
 
