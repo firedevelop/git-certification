@@ -98,24 +98,32 @@ mkdir myFolder && myFolder/myFile.txt
 ### resume status
 ``` git status --short ```
 
-# ALIAS
-## Method 1 (direct command)
-```git config --global alias.s status --short --branch```
+# ALIAS (or shortcuts)
+## Create Alias Status
+when you write:
+```git s```
+will be the same like:
+```git status --short --branch```
 
-## CREATE ALIAS ELEGANTH LOG
-install extension like Github Lab or write the next command:
-```bash
-git config --global alias.lg "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
-```
+you can config the alias using the next command:
+```git config --global alias.s "status --short --branch"```
 
-### i.e for short using the key 's'
-``` git config --global alias.s status --short ```
+or to config this Alias you can use edit mode:
 
-### EDIT alias
-git config --global -e
-## CREATE ALIAS SHORTS
+```git config --global -e```
 in [alias] area write the next to see the actual branch info
 ```s = status --short --branch```
+
+
+## Create Alias eleganth log
+install extension like Github Lab or write the next command:
+```git config --global -e```
+
+```bash
+git config --global alias.l "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+```
+after config you will get a nice logs using the next command:
+```git l```
 
 ## DIFF
 git diff myFile.txt
