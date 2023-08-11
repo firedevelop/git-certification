@@ -116,7 +116,7 @@ in [alias] area write the next to see the actual branch info
 
 
 ## Create Alias eleganth log
-install extension like Github Lab or write the next command:
+install extension like Github Lab or write the next command
 ```git config --global -e```
 
 ```bash
@@ -196,6 +196,37 @@ Now remove old branch if you wish. -f force fully deletion and some possible com
 ### BRANCH
 create branch and go to the branch in one line
 ```git checkout -b rama-villanos```
+
+### BRANCH - See remote branches on local
+see remote branches
+```git branch -a```
+
+download remote branches to local
+```git checkout yourRemoteBranchName```
+
+Now if you check your local branches, you can see the new branch:
+```git branch```
+
+### BRANCH - clean remove old branches
+see branches:
+```git branch -a```
+you will see the next old branches:
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+  remotes/origin/rama-misiones
+
+the next command only work if the remote branch exist.
+If not this command didn't work, because the remote branch was deleted:
+```  git push origin :rama-misiones```
+
+then try to delete old branches on your local:
+```git remote prune origin```
+
+
+
+
+
 
 # REBASE
 ## Normal
@@ -326,7 +357,53 @@ create new branch on local
 ```git checkout -b rama-villanos```
 
 create new branch on github
-git push --set-upstream origin rama-villanos
+```git push --set-upstream origin rama-villanos```
+
+
+
+# BRANCH PRODUCTION - how keep 2 branches version for long time of your App. V1 and V2
+Some business only pay for the version V1 and your app is on V2, but you need maintenance both versions. Here we keep both V1 and V2 of our app., usign 2 branches.
+
+![alt text](https://github.com/firedevelop/git-github-certification/blob/main/images/14.png?raw=true)
+
+We never work on version main.
+Create new branch:
+```git checkout -b rama-kitkat```
+
+```echo capitan >> villanos.md```
+```git commit -am "villa capi"```
+
+create a tag:
+```git tag -a v.1.0.0 -m "kitkat - stable"```
+
+push tags
+```git push --tags```
+
+create Release, go to github on browser and create new release on this Tag V1.0.0
+It's very IMPORTANT to do. Because if someone delete the old branch, Github keep the Releases.
+
+## How restore a deleted branch if we have the Releases
+### METHOD 1
+go to Repository > select Branches > select tab Tags > create new branch:
+![alt text](https://github.com/firedevelop/git-github-certification/blob/main/images/15.png?raw=true)
+
+### METHOD 2
+1. delete old branch v1.0.0 on Github
+2. go to the Release v1.0.0
+3. find the branch commmit. i.e. b00b2be
+4. copy code file.
+5. on local create branch:
+```git checkout -b rama-kitkat```
+6. create a new file and paste content:
+```touch pasteTheCopyText >> villanos.md```
+```bash
+git add .
+git commit -am "new branch recovered"
+git push
+```
+remove branch old:
+```git push origin :rama-kitkat```
+
 
 
 
